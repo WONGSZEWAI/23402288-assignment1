@@ -14,6 +14,9 @@ def clean(input1, input2, output):
 
     merged_data.to_csv(output, index=False)
 
+    output_data = pd.read_csv(args.output)
+    print("Output file shape is:", output_data.shape)
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('input1', help='respondent_contact.csv file')
